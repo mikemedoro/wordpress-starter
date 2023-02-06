@@ -1,0 +1,50 @@
+#tinymce {
+  @apply text-black bg-white;
+  margin: 15px;
+}
+
+/* Media alignment */
+.alignnone {
+  @apply h-auto max-w-full ml-0 mr-0;
+}
+
+.aligncenter {
+  @apply block h-auto mx-auto my-4;
+}
+
+.alignleft,
+.alignright {
+  @apply h-auto my-4;
+}
+
+.alignleft {
+  @apply float-left ml-0 mr-6;
+}
+
+.alignright {
+  @apply float-right ml-6 mr-0;
+}
+
+@screen mobile {
+  .alignleft,
+  .alignright {
+    @apply block float-none mx-auto;
+  }
+}
+
+/* Captions */
+.wp-caption {
+  @apply mt-0 text-xs leading-normal border-none shadow-none;
+
+  .wp-caption-text {
+    @apply mt-2;
+  }
+}
+
+#menu-item-gallery,
+#menu-item-playlist,
+#menu-item-video-playlist,
+#menu-item-featured-image,
+#menu-item-embed {
+  display: none !important;
+}

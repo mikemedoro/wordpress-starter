@@ -1,0 +1,85 @@
+.text-block,
+.mce-content-body {
+  h2:not(.kicker) {
+    @apply type-h2;
+  }
+  h3:not(.kicker) {
+    @apply type-h3;
+  }
+  h4:not(.kicker) {
+    @apply type-h4;
+  }
+  h5:not(.kicker) {
+    @apply type-h5;
+  }
+  .btn {
+    @apply mt-6;
+  }
+  > {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply mt-12;
+    }
+    :where(h2 + *) {
+      @apply !mt-0;
+    }
+    :where(h3 + *) {
+      @apply !mt-0;
+    }
+    :where(h4 + *) {
+      @apply !mt-0;
+    }
+    :where(h5 + *) {
+      @apply !mt-0;
+    }
+    :where(h6 + *) {
+      @apply !mt-0;
+    }
+    :first-child {
+      @apply mt-0;
+    }
+    .kicker + * {
+      @apply mt-2;
+    }
+    figure {
+      @apply my-10;
+    }
+    ul:not([class]),
+    ol:not([class]) {
+      @apply mt-4 mb-4 ml-4 text-left;
+
+      li {
+        @apply pl-2 mt-2 mb-2;
+      }
+    }
+    ul:not([class]) {
+      @apply list-disc marker:text-primary;
+    }
+    ol:not([class]) {
+      @apply list-decimal;
+    }
+    blockquote {
+      @apply my-4;
+      quotes: '“' '”' '‘' '’';
+
+      > :last-child {
+        @apply mb-0;
+      }
+
+      p {
+        @apply text-xl;
+        @apply before:relative before:-left-1 before:content-[open-quote];
+        @apply after:relative after:content-[close-quote];
+      }
+      cite {
+        @apply before:content-['—_'];
+      }
+    }
+    hr {
+      @apply my-12;
+    }
+  }
+}

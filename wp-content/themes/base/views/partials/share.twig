@@ -1,0 +1,19 @@
+<div class="share">
+	<div class="flex flex-wrap items-center">
+		<div class="w-full mb-1 text-sm">Share:</div>
+
+		<div class="space-x-4">
+			<a href="http://www.facebook.com/sharer.php?u={{ post.link|url_encode }}" class="text-black" target="_blank" rel="noopener">
+				<i class="text-xl fab fa-facebook" role="presentation"></i>
+			</a>
+
+			<a href="https://twitter.com/share?url={{ post.link|url_encode }}&amp;text={{ post.title|url_encode }}" class="text-black" target="_blank" rel="noopener">
+				<i class="text-xl fab fa-twitter" role="presentation"></i>
+			</a>
+
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ post.link|url_encode }}" class="text-black" target="_blank" rel="noopener">
+				<i class="text-xl fab fa-linkedin" role="presentation"></i>
+			</a>
+		</div>
+	</div>
+</div>

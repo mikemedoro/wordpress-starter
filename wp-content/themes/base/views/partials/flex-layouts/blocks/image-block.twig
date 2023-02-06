@@ -1,0 +1,13 @@
+<div class="image-block">
+	<div class="flex flex-col flex-wrap content-center">
+        {% set img = Image(flex_item.image) %}
+
+		<img src="{{ img.src }}" width="{{ img.width }}" height="{{ img.height }}" loading="lazy" alt="{{ img.alt }}">
+
+		{% if img.caption %}
+			<div class="mt-4">
+				<p class="mb-0 text-sm italic">{{ img.caption }}</p>
+			</div>
+		{% endif %}
+	</div>
+</div>

@@ -1,0 +1,10 @@
+@layer components {
+  .container {
+    @apply px-5 mx-auto max-w-10xl;
+    @apply md:px-10;
+  }
+  .container-fluid {
+    @apply px-5 mx-auto;
+    @apply md:px-10;
+  }
+}

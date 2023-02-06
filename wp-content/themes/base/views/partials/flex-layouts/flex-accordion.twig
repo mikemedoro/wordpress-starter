@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="accordion relative overflow-hidden border-t border-gray-300">
+		{% for item in flex_item.accordion %}
+			<details class="accordion__item relative border-b border-gray-300">
+				<summary class="cursor-pointer">
+					<div class="accordion__toggle flex items-center py-8 relative">
+						<span class="accordion__toggle-icon relative inline-flex items-center justify-center flex-grow-0 flex-shrink-0 w-10 h-10 mr-6 text-xl text-white rounded-full transition-transform md:w-12 md:h-12 bg-primary"></span>
+
+						<div class="text-xl">{{ item.panel_title }}</div>
+					</div>
+				</summary>
+
+				<div class="accordion__content relative overflow-hidden">
+					<div class="py-4 pt-0">
+						{{ item.panel_text }}
+					</div>
+				</div>
+			</details>
+		{% endfor %}
+	</div>
+</div>

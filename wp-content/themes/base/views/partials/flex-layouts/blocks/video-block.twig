@@ -1,0 +1,25 @@
+<div class="relative video-block">
+	{% if flex_item.video_type == 'file' %}
+		<div class="aspect-w-16 aspect-h-9">
+			{% if flex_item.video_style == 'standard' %}
+				<div class="play-btn">
+					<span class="sr-only">Play Video</span>
+				</div>
+			{% endif %}
+
+			<video class="video-block__source" preload="auto" playsinline autoplay loop muted>
+				<source src="{{ flex_item.video_file['url'] }}" type="video/mp4">
+			</video>
+		</div>
+	{% elseif flex_item.video_type == 'external' %}
+		<div class="aspect-w-16 aspect-h-9">
+			{{ flex_item.external_url }}
+		</div>
+	{% endif %}
+
+	{% if flex_item.video_file.caption %}
+		<div class="mt-4">
+			<p class="mb-0 text-sm italic">{{ flex_item.video_file.caption }}</p>
+		</div>
+	{% endif %}
+</div>

@@ -1,0 +1,35 @@
+<div class="page-header relative bg-gray-100">
+	<div class="relative z-10 flex h-[450px] min-h-[70vh] flex-col justify-center py-10">
+		<div class="container-fluid w-full">
+			<div class="lg:w-[60%]">
+				{% if post.page_headline %}
+					<h1 class="type-display">{{ post.page_headline }}</h1>
+				{% else %}
+					<h1 class="type-display">{{ post.title }}</h1>
+				{% endif %}
+
+				{% if is_archive %}
+					<h1 class="type-display">{{ archive_title }}</h1>
+				{% endif %}
+
+				{% if is_404 %}
+					<h1 class="type-display">404 Not Found</h1>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% if post.page_header_image %}
+		{% set img = Image(post.page_header_image).src('hidef') %}
+	{% endif %}
+
+	{% if post.page_header_video %}
+		<div class="overlay-tint absolute top-0 left-0 z-0 h-full w-full">
+			<video class="absolute top-[50%] left-[50%] z-0 h-full w-full -translate-x-1/2 -translate-y-1/2 transform object-cover" preload="auto" playsinline autoplay loop muted>
+				<source src="{{ post.meta('page_header_video') }}" type="video/mp4"/>
+			</video>
+		</div>
+	{% elseif img %}
+		<div class="overlay-tint absolute top-0 left-0 z-0 h-full w-full bg-cover bg-center bg-no-repeat" style="background-image: url( {{ img }} );" role="img"></div>
+	{% endif %}
+</div>

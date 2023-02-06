@@ -1,0 +1,145 @@
+{
+    "key": "group_61118a2403614",
+    "title": "Module: Video",
+    "fields": [
+        {
+            "key": "field_61118a2a2f396",
+            "label": "Video Type",
+            "name": "video_type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "file": "File",
+                "external": "External"
+            },
+            "allow_null": 0,
+            "default_value": "file",
+            "layout": "horizontal",
+            "return_format": "value",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_6112e82cef0b8",
+            "label": "Style",
+            "name": "video_style",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61118a2a2f396",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "standard": "Standard",
+                "loop": "Background Loop"
+            },
+            "allow_null": 0,
+            "default_value": "standard",
+            "layout": "horizontal",
+            "return_format": "value",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_61118a672f397",
+            "label": "Video File",
+            "name": "video_file",
+            "type": "file",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61118a2a2f396",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "required_message": "",
+            "uploader": "",
+            "return_format": "array",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4",
+            "upload_folder": "",
+            "multiple": 0,
+            "max": "",
+            "acfe_field_group_condition": 0,
+            "library": "all"
+        },
+        {
+            "key": "field_61118ab12f398",
+            "label": "External URL",
+            "name": "external_url",
+            "type": "oembed",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61118a2a2f396",
+                        "operator": "==",
+                        "value": "external"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "required_message": "",
+            "width": "",
+            "height": "",
+            "acfe_field_group_condition": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 7,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1639602614
+}

@@ -1,0 +1,28 @@
+{% if posts.pagination and posts.pagination.pages %}
+	<div class="flex items-center justify-center border-t pt-15 mt-15 pagination">
+		{% if posts.pagination.prev %}
+			<a href="{{ posts.pagination.prev.link }}" class="{{ posts.pagination.prev.link|length ? '' : 'inactive' }}">
+				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewbox="0 0 20 20" fill="currentColor">
+					<path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+				</svg>
+				<span class="sr-only">Previous</span>
+			</a>
+		{% endif %}
+
+		<span class="mx-4 pagination__delimiter">
+			Page
+			{{ posts.pagination.current }}
+			of
+			{{ posts.pagination.total }}
+		</span>
+
+		{% if posts.pagination.next %}
+			<a href="{{ posts.pagination.next.link}}" class="{{ posts.pagination.next.link|length ? '' : 'inactive' }}">
+				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewbox="0 0 20 20" fill="currentColor">
+					<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+				</svg>
+				<span class="sr-only">Next</span>
+			</a>
+		{% endif %}
+	</div>
+{% endif %}

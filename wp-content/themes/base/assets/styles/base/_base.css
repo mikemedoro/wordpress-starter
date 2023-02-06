@@ -1,0 +1,9 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans leading-normal text-black selection:bg-primary selection:text-white;
+  }
+}

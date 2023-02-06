@@ -1,0 +1,6 @@
+@layer components {
+  .overlay-tint {
+    @apply relative;
+    @apply after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black after:opacity-40 after:pointer-events-none;
+  }
+}

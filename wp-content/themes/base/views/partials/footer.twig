@@ -1,0 +1,21 @@
+<footer class="site-footer bg-gray-100" id="site-footer">
+	<div class="container-fluid py-10">
+		<div class="flex flex-wrap items-center justify-between">
+			{% if options.social_media %}
+				<div class="flex flex-wrap space-x-4">
+					{% for social_item in options.social_media %}
+						<a href="{{ social_item.social_url }}" class="icon" target="_blank" rel="noopener">
+							{{ social_item.social_channel['label'] }}
+							<i class="fab fa-{{ social_item.social_channel['value'] }}"></i>
+						</a>
+					{% endfor %}
+				</div>
+			{% endif %}
+
+			<div>
+				Copyright &copy;
+				{{ now|date('Y') }}
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,41 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<div class="post post-type-{{ post.post_type }}">
+
+		{% if post.thumbnail %}
+			{% set img = post.thumbnail %}
+			<div class="spacer">
+				<div class="container">
+					<img src="{{ img.src('hidef') }}" alt="{{ img.alt }}">
+				</div>
+			</div>
+		{% endif %}
+
+		<div class="container">
+			<div class="max-w-3xl pb-8 mx-auto border-b mt-15 mb-15">
+				<div class="mb-2 italic">
+					Posted on:
+					{{ post.date }}
+				</div>
+			</div>
+		</div>
+
+		{% include "partials/flex-content.twig" %}
+
+		{% if post.content %}
+			<div class="spacer">
+				<div class="container">
+					{{ post.content }}
+				</div>
+			</div>
+		{% endif %}
+
+		<div class="container">
+			<div class="pt-8 mx-auto border-t mt-15 mb-15">
+				{% include "partials/share.twig" %}
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

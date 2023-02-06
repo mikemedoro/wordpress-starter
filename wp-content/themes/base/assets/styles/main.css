@@ -1,0 +1,28 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'base/_base.css';
+@import 'base/_fonts.css';
+@import 'base/_typography.css';
+@import 'base/_forms.css';
+
+@import 'components/_container.css';
+@import 'components/_spacer.css';
+@import 'components/_button.css';
+@import 'components/_text-block.css';
+@import 'components/_play-button.css';
+@import 'components/_overlay-tint.css';
+@import 'components/_accordion.css';
+@import 'components/_fx.css';
+
+@import 'layout/_header.css';
+@import 'layout/_general.css';
+@import 'layout/_footer.css';
+@import 'layout/_flex-content.css';
+
+@import 'pages/_post.css';
+
+@import 'admin.css';
+
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';

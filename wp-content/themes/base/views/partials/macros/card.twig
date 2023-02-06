@@ -1,0 +1,39 @@
+{% macro card(header, title, body, footer, link, img, alt) %}
+	<div class="flex flex-col h-full">
+		{% if img %}
+			{% if link %}
+				<a href="{{ link }}" class="block mb-4">
+            {% endif %}
+				<img src="{{ img }}" alt="{{ alt }}">
+            {% if link %}
+				</a>
+			{% endif %}
+		{% endif %}
+
+		{% if header %}
+			<div class="mb-4 kicker">
+				{{ header }}
+			</div>
+		{% endif %}
+
+		{% if title %}
+			<h3 class="type-h3">
+				<a href="{{ link }}" class="no-underline">
+					{{ title }}
+				</a>
+			</h3>
+		{% endif %}
+
+		{% if body %}
+			<div class="mb-8">
+				{{ body }}
+			</div>
+		{% endif %}
+
+		{% if footer %}
+			<div class="mt-auto text-sm">
+				{{ footer }}
+			</div>
+		{% endif %}
+	</div>
+{% endmacro %}

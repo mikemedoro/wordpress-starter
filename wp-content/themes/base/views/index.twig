@@ -1,0 +1,39 @@
+{% extends "layouts/base.twig" %}
+
+{% from "partials/macros/card.twig" import card %}
+
+{% block content %}
+	<div class="section spacer">
+
+		<div class="container">
+			<div class="flex flex-wrap -mx-5">
+				{% for post in posts %}
+					<div class="w-full px-5 md:w-4/12 {{ loop.last != true ? ' mb-15 md:mb-0' }}">
+						{% if post.preview is not empty %}
+							{% set excerpt = '<p>' ~ post.preview.read_more(false) ~ '</p>' %}
+						{% else %}
+							{% set excerpt = '' %}
+						{% endif %}
+
+						{% if post.thumbnail %}
+							{% set img = Image(post.thumbnail).src('large') %}
+							{% set alt = Image(post.thumbnail).alt %}
+						{% else %}
+							{% set img = '' %}
+							{% set alt = '' %}
+						{% endif %}
+
+						{{ card(post.category, post.title, excerpt, post.date, post.link, img, alt) }}
+					</div>
+				{% else %}
+					<div class="w-full mt-6 text-center">
+						<p class="lead">There are no posts at this time.</p>
+					</div>
+				{% endfor %}
+			</div>
+
+			{% include 'partials/pagination.twig' with { 'posts': posts } %}
+		</div>
+
+	</div>
+{% endblock %}

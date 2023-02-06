@@ -1,0 +1,30 @@
+@layer components {
+  .accordion {
+    &__toggle-icon {
+      &::before,
+      &::after {
+        @apply bg-white block w-0.5 h-5 rounded-sm m-auto absolute left-0 right-0 transition-all top-1/2 -translate-y-1/2;
+        content: '';
+      }
+      &::after {
+        @apply rotate-90;
+      }
+    }
+
+    .accordion__item[open] {
+      .accordion__toggle-icon {
+        @apply rotate-45;
+      }
+    }
+
+    details,
+    summary {
+      @apply list-none outline-none;
+    }
+
+    details summary::-webkit-details-marker,
+    details summary::marker {
+      @apply hidden;
+    }
+  }
+}

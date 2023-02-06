@@ -1,0 +1,56 @@
+@layer base {
+  p {
+    @apply mb-4;
+  }
+  small {
+    @apply text-sm;
+  }
+  a {
+    @apply text-black no-underline transition-colors duration-200 hover:text-gray-500;
+  }
+  a:not([class]) {
+    @apply underline text-primary hover:text-secondary;
+    text-decoration-skip-ink: auto;
+  }
+  blockquote {
+    quotes: '“' '”' '‘' '’';
+  }
+}
+
+@layer components {
+  .type-h1 {
+    @apply mb-4 font-sans text-4xl font-bold md:text-5xl;
+    @apply leading-tight;
+  }
+  .type-h2 {
+    @apply mb-4 font-sans text-3xl font-bold md:text-4xl;
+    @apply leading-tight;
+  }
+  .type-h3 {
+    @apply mb-4 font-sans text-2xl font-bold md:text-3xl;
+    @apply leading-tight;
+  }
+  .type-h4 {
+    @apply mb-4 font-sans text-xl font-bold md:text-2xl;
+    @apply leading-tight;
+  }
+  .type-h5 {
+    @apply mb-4 font-sans text-lg font-bold md:text-xl;
+    @apply leading-tight;
+  }
+  .type-h6 {
+    @apply mb-4 font-sans font-bold;
+    @apply leading-tight;
+  }
+  .type-display {
+    @apply font-sans text-6xl font-bold md:text-7xl;
+    @apply leading-none;
+  }
+  .lead {
+    @apply font-sans text-xl font-light md:text-2xl;
+    @apply leading-snug;
+  }
+  .kicker {
+    @apply mb-4 font-sans font-bold tracking-wider uppercase text-xs;
+  }
+}

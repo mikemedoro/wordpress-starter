@@ -1,0 +1,41 @@
+.site-header {
+}
+
+.main-nav {
+}
+
+.main-nav-toggle {
+}
+
+.menu-icon {
+  &__slice {
+    @apply absolute inset-0 block m-auto transition-transform origin-center bg-primary w-full h-px;
+
+    &:first-child {
+      @apply translate-y-2;
+    }
+    &:last-child {
+      @apply -translate-y-2;
+    }
+  }
+}
+
+body.menu-open {
+  @apply overflow-hidden;
+
+  .main-nav {
+  }
+  .menu-icon {
+    &__slice {
+      &:first-child {
+        @apply translate-y-1/2 -rotate-45;
+      }
+      &:nth-child(2) {
+        @apply opacity-0;
+      }
+      &:last-child {
+        @apply translate-y-1/2 rotate-45;
+      }
+    }
+  }
+}

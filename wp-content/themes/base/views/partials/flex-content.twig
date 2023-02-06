@@ -1,0 +1,9 @@
+{% for flex_item in flex_fields %}
+
+	{% set classes = ['section', 'spacer', 'flex-content', 'flex-content--' ~ flex_item.acf_fc_layout ] %}
+
+	<div class="{{ classes|join(' ') }}">
+		{% include 'partials/flex-layouts/flex-' ~ flex_item.acf_fc_layout ~ '.twig' %}
+	</div>
+
+{% endfor %}

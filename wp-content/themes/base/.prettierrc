@@ -1,0 +1,14 @@
+{
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSameLine": true,
+  "overrides": [
+    {
+      "files": ["*.html", "*.twig"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}

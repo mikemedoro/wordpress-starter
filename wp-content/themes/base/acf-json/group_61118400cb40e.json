@@ -1,0 +1,71 @@
+{
+    "key": "group_61118400cb40e",
+    "title": "Component: Image Size",
+    "fields": [
+        {
+            "key": "field_611184061d3f4",
+            "label": "Image Size",
+            "name": "image_size",
+            "type": "acfe_image_sizes",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "image_sizes": [
+                "thumbnail",
+                "medium",
+                "large",
+                "xlarge",
+                "full"
+            ],
+            "field_type": "select",
+            "max": "",
+            "default_value": [
+                "full"
+            ],
+            "display_format": "name_size",
+            "return_format": "object",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "acfe_field_group_condition": 0,
+            "choices": [],
+            "ajax": 0,
+            "placeholder": "",
+            "search_placeholder": "",
+            "layout": "",
+            "toggle": 0,
+            "allow_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 38,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1639602847
+}

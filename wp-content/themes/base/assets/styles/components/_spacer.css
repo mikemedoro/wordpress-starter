@@ -1,0 +1,10 @@
+@layer components {
+  .spacer {
+    @apply my-15;
+    @apply md:my-20;
+  }
+  .padder {
+    @apply mt-0 mb-0 py-15;
+    @apply md:py-20;
+  }
+}
