@@ -1,6 +1,6 @@
 # WordPress + Timber Starter Theme
 
-A base starter theme that you can build from. The primary purpose of this project is to provide a base structure for beginning WordPress websites. This project utilizes Timber plugin for Twig templating and TailwindCSS for syling.
+A base starter theme that you can build from. The primary purpose of this project is to provide a base structure for beginning WordPress websites. This project utilizes Timber plugin for Twig templating and TailwindCSS for styling.
 
 ## Installation & setup
 
