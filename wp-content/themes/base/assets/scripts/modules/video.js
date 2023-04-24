@@ -9,17 +9,19 @@ const PlayVideo = {
     this.PlayVideo();
   },
   PlayVideo() {
-    $('.play-btn').on('click', (e) => {
-      const $this = $(e.currentTarget);
-      const $video = $this.parents('.video-block').find('video');
+    document.querySelectorAll('.play-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const videoBlock = e.currentTarget.closest('.video-block');
+        const video = videoBlock.querySelector('video');
 
-      gsap.to($this, { autoAlpha: 0, duration: 0.35 });
+        gsap.to(e.currentTarget, { autoAlpha: 0, duration: 0.35 });
 
-      $video[0].muted = false;
-      $video[0].controls = true;
-      $video[0].currentTime = 0;
-      $video[0].loop = false;
-      $video[0].play();
+        video.muted = false;
+        video.controls = true;
+        video.currentTime = 0;
+        video.loop = false;
+        video.play();
+      });
     });
   },
 };
