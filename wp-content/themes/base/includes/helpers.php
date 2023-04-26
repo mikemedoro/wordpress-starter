@@ -24,8 +24,8 @@ function parse_video_uri( $url ) {
   // or http://www.youtube.com/embed/xxxx
   if ( ( $parse['host'] == 'youtube.com' ) || ( $parse['host'] == 'www.youtube.com' ) ) {
     $video_type = 'youtube';
-    parse_str( $parse['query'] );
-    $video_id = $v;
+    parse_str( $parse['query'], $query );
+    $video_id = isset( $query['v'] ) ? $query['v'] : '';
 
     if ( !empty( $feature ) )
       $video_id = end( explode( 'v=', $parse['query'] ) );
