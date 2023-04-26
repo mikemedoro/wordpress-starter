@@ -9,7 +9,7 @@ add_filter( 'login_headerurl', function() {
 } );
 
 add_filter( 'login_headertext', function() {
-  return get_bloginfo('name');
+  return get_bloginfo( 'name' );
 } );
 
 add_action( 'login_enqueue_scripts', function() { ?>
