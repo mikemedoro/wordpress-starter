@@ -8,7 +8,6 @@ const mix = require('laravel-mix');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const CopyPlugin = require('copy-webpack-plugin');
-const tailwindcss = require('tailwindcss');
 
 mix
   .setPublicPath('./dist')
@@ -16,7 +15,7 @@ mix
   .js('assets/scripts/app.js', 'dist/scripts')
   .postCss('assets/styles/admin.css', 'dist/styles/admin.css')
   .postCss('assets/styles/main.css', 'dist/styles/app.css', [
-    tailwindcss('./tailwind.config.js'),
+    require('tailwindcss'),
   ])
   .copyDirectory('assets/fonts', 'dist/fonts')
   .options({
