@@ -30,13 +30,12 @@ module.exports = {
       serif: ['Georgia', 'Times New Roman', 'Times', 'serif'],
     },
     screens: {
-      mobile: { max: '639px' },
-      tablet: { max: '767px' },
       sm: '640px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      '2xl': '1440px',
+      '2xl': '1600px',
+      '3xl': '1920px',
     },
     extend: {
       fontSize: {
