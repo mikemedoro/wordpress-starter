@@ -25,11 +25,9 @@
   @apply float-right ml-6 mr-0;
 }
 
-@screen mobile {
-  .alignleft,
-  .alignright {
-    @apply block float-none mx-auto;
-  }
+.alignleft,
+.alignright {
+  @apply max-md:block max-md:float-none max-md:mx-auto;
 }
 
 /* Captions */
