@@ -16,30 +16,17 @@
     @apply mt-6;
   }
   > {
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    :where(h2, h3, h4, h5, h6) {
       @apply mt-12;
     }
-    :where(h2 + *) {
-      @apply !mt-0;
-    }
-    :where(h3 + *) {
-      @apply !mt-0;
-    }
-    :where(h4 + *) {
-      @apply !mt-0;
-    }
-    :where(h5 + *) {
-      @apply !mt-0;
-    }
-    :where(h6 + *) {
-      @apply !mt-0;
+    :is(h2, h3, h4, h5, h6) + * {
+      @apply mt-0;
     }
     :first-child {
       @apply mt-0;
+    }
+    :last-child {
+      @apply mb-0;
     }
     .kicker + * {
       @apply mt-2;
@@ -49,10 +36,10 @@
     }
     ul:not([class]),
     ol:not([class]) {
-      @apply mt-4 mb-4 ml-4 text-left;
+      @apply mb-4 ml-4 mt-4 text-left;
 
       li {
-        @apply pl-2 mt-2 mb-2;
+        @apply mb-2 mt-2 pl-2;
       }
     }
     ul:not([class]) {
